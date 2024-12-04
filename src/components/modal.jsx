@@ -72,39 +72,45 @@ const AuthModal = ({login, isOpen, onClose}) => {
                         {!isLogin && (
                             <div className='mb-3'>
                                 <label>
-                                    Email: &emsp;
-                                    <input
-                                        className='rounded-md hover:border-blue-500 greyBg'
-                                        type="email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        required
-                                    />
+                                    <div className='flex justify-between'>
+                                        Email: &emsp;
+                                        <input
+                                            className='rounded-md hover:border-blue-500 greyBg'
+                                            type="email"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            required
+                                        />
+                                    </div>
                                 </label>
                             </div>
                         )}
                         <div className='mb-3'>
                             <label>
-                                Name:&emsp;
-                                <input
-                                    className='rounded-md hover:border-blue-500 greyBg'
-                                    type="text"
-                                    value={username}
-                                    onChange={(e) => setName(e.target.value)}
-                                    required
-                                />
+                                <div className='flex justify-between'>
+                                    Name:&emsp;
+                                    <input
+                                        className='rounded-md hover:border-blue-500 greyBg'
+                                        type="text"
+                                        value={username}
+                                        onChange={(e) => setName(e.target.value)}
+                                        required
+                                    />
+                                </div>
                             </label>
                         </div>
                         <div className='mb-3'>
                             <label>
-                                Password:&emsp;
-                                <input
-                                    className='rounded-md hover:border-blue-500 greyBg'
-                                    type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                />
+                                <div className='flex justify-between'>
+                                    Password:&emsp;
+                                    <input
+                                        className='rounded-md hover:border-blue-500 greyBg'
+                                        type="password"
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                        required
+                                    />
+                                </div>
                             </label>
                         </div>
                         <button className='bg-customGreen w-full rounded-lg hover:bg-gray-800  hover:text-white transition duration-200' type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
